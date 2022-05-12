@@ -2,7 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="text-center">
+    <h1>Cadastro de Pessoas</h1>
+</div>
+
+<div class="text-center">
+    <form name="cadastro">
+        <label for="id">ID</label><br>
+        <input type="text" name="id" id="id">
+        <br><br>
+
+
+        <label for='nome'>Nome</label><br>
+        <input type='text' name='nome' id='nome'>
+        <br><br>
+
+        <label for='cpf'> CPF</label><br>
+        <input type='text' name='cpf' id='cpf'>
+        <br><br>
+
+
+
+
+        <input type='button' name='botao' value='Calcular' onclick='executar()'>
+
+        <input type='reset'>
+    </form>
 </div>
