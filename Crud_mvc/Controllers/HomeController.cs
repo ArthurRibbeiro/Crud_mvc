@@ -38,6 +38,16 @@ namespace Crud_mvc.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Lista (int pessoaId, string nome, string cpf)
+        {
+            ViewData["pessoaId"] = pessoaId;
+            ViewData["nome"] = nome;
+            ViewData["cpf"] = cpf;
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

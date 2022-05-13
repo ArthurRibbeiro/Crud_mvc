@@ -9,4 +9,8 @@
     <Content Remove="Views\Home\htmlpage.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Home\htmlpage.html" />
+  </ItemGroup>
+
 </Project>
