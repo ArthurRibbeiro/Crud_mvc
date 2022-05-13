@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\Formulário.cshtml" />
     <Content Remove="Views\Home\htmlpage.cshtml" />
   </ItemGroup>
 

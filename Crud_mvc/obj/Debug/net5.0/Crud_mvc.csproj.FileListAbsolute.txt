@@ -38,4 +38,5 @@ C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\ref\Crud_mvc.dll
 C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.pdb
 C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.genruntimeconfig.cache
 C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.csproj.CopyComplete
-C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Formulário.cshtml.g.cs
+C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Cadastro.cshtml.g.cs
+C:\Reposit\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Consulta.cshtml.g.cs
