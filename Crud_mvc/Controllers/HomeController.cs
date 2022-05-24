@@ -38,13 +38,21 @@ namespace Crud_mvc.Controllers
             return View();
         }
 
+
+
         [HttpPost]
-        public ActionResult Lista (int pessoaId, string nome, string cpf)
+        public ActionResult Lista (int pessoaId, string nome, string cpf, string email, string tel)
         {
             ViewData["pessoaId"] = pessoaId;
             ViewData["nome"] = nome;
             ViewData["cpf"] = cpf;
+            ViewData["email"] = email;
+            ViewData["tel"] = tel;
 
+            String salvar = (pessoaId + ";" + nome + ";" + cpf + ";" + email + ";" + tel);
+            ViewData["salvar"] = salvar;
+            SavePessoa.Criar();
+            SavePessoa.Salvar(salvar);
             return View();
         }
 

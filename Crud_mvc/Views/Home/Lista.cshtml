@@ -1,10 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Lista";
+}
 
-</body>
-</html>
+<h2>Visualizar</h2>
+
+<div>
+    @ViewData["pessoaId"]
+    @ViewData["nome"]
+    @ViewData["cpf"]
+    @ViewData["email"]
+    <br /><br />
+    @ViewData["salvar"]
+</div>
+<div>
+
+</div>
