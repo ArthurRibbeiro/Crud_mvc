@@ -22,8 +22,9 @@ namespace Crud_mvc.Models
             string caminho = @"C:\doc\save.txt";
             try
             {
-                File.WriteAllText(caminho, conteudo);
-                File.Close();
+                using var file = File.AppendText(caminho);
+                file.WriteLine(caminho, conteudo);
+                file.Close();
             }
             catch (Exception e)
             {
