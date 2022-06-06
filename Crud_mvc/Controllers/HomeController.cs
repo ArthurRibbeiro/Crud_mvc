@@ -41,13 +41,14 @@ namespace Crud_mvc.Controllers
 
 
         [HttpPost]
-        public ActionResult Lista (int pessoaId, string nome, string cpf, string email, string tel)
+        public ActionResult Lista (string nome, string sobrenome, string cpf, string nasc, string sexo)
         {
-            ViewData["pessoaId"] = pessoaId;
+            
             ViewData["nome"] = nome;
+            ViewData["sobrenome"] = sobrenome;
             ViewData["cpf"] = cpf;
-            ViewData["email"] = email;
-            ViewData["tel"] = tel;
+            ViewData["nasc"] = nasc;
+            ViewData["sexo"] = sexo;
 
             String salvar = (pessoaId + ";" + nome + ";" + cpf + ";" + email + ";" + tel);
             ViewData["salvar"] = salvar;
