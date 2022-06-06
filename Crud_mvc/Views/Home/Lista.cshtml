@@ -8,12 +8,21 @@
 <h2>Visualizar</h2>
 
 <div>
+    <h3>Nome</h3><br>
+    <p>
+        @ViewData["nome"] @ViewData["sobrenome"]<br><br>
+    </p>
+</div>
+<div>
+    <h3>CPF</h3><br>
+    @ViewData["cpf"]<br><br>
 
-    @ViewData["nome"]
-    @ViewData["sobrenome"]
-    @ViewData["cpf"]
-    @ViewData["nasc"]
-    @ViewData["sexo"]
+    <h3>Data de Nascimento</h3><br>
+    @ViewData["nasc"]<br><br>
+
+    <h3>Sexo</h3><br>
+    @ViewData["sexo"]<br><br>
+
     <br /><br />
     @ViewData["salvar"]
 </div>

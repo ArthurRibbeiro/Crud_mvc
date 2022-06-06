@@ -11,25 +11,43 @@
     <div class="text-center">
         <form action="Lista" method="post" name="cadastro">
 
+            <div style="display:flex; flex-direction:row; flex-wrap:nowrap">
+                <div>
+                    <label for='nome'>Nome</label><br>
+                    <input type='text' name='nome' id='nome'
+                </div>
+                
 
+                <div>
 
-            <label for='nome'>Nome</label><br>
-            <input type='text' name='nome' id='nome'>
+                    <label for='sobrenome'>Sobrenome</label><br>
+                    <input type='text' name='sobrenome' id='sobrenome'>
+
+                </div>
+            </div>
             <br><br>
+            <div>
 
-            <label for='sobrenome'>Sobrenome</label><br>
-            <input type='text' name='sobrenome' id='sobrenome'>
-            <br><br>
+                <label for='cpf'>CPF</label><br>
+                <input type='text' name='cpf' id='cpf'>
+                <br><br>
+            </div>
 
-            <label for='nasc'>Data de Nascimento</label><br>
-            <input type='text' name='nasc' id='nasc'>
-            <br><br>
+            <div>
 
-            <label for="sexo">Sexo</label><br>
-            <input type="text" name="sexo" id="sexo">
-            <br><br>
+                <label for='nasc'>Data de Nascimento</label><br>
+                <input type='text' name='nasc' id='nasc'>
+                <br><br>
+            </div>
 
-            
+            <div>
+
+                <label for="sexo">Sexo</label><br>
+                <input type="text" name="sexo" id="sexo">
+                <br><br>
+            </div>
+
+
             <input type='submit' name='casastro' value='Cadastrar'>
 
             <input type="button" name="busca" value="Buscar">

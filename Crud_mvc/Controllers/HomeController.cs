@@ -50,10 +50,7 @@ namespace Crud_mvc.Controllers
             ViewData["nasc"] = nasc;
             ViewData["sexo"] = sexo;
 
-            String salvar = (pessoaId + ";" + nome + ";" + cpf + ";" + email + ";" + tel);
-            ViewData["salvar"] = salvar;
-            SavePessoa.Criar();
-            SavePessoa.Salvar(salvar);
+
             return View();
         }
 
