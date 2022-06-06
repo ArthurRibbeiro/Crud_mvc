@@ -15644,6 +15644,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Reposit\\Crud_mvc\\Crud_mvc\\Views\\Home\\Lista.cshtml",
+      "TargetPath": "Views\\Home\\Lista.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Reposit\\Crud_mvc\\Crud_mvc\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
