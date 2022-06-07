@@ -51,6 +51,8 @@ namespace Crud_mvc.Controllers
             ViewData["sexo"] = sexo;
 
 
+            //System.IO.File.WriteAllText("","");
+
             return View();
         }
 

@@ -6,39 +6,57 @@
     <script>
         function verificaNome() {
             if (document.getElementById("nome").value == "") {
-                alert("Preencha o campo Nome")
-                document.getElementById("nome").focus();
+                document.getElementById("avisoNome").style.display = "block";
 
+                //alert("Preencha o campo Nome");
+                //document.getElementById("nome").focus();
+
+            } else {
+                document.getElementById("avisoNome").style.display = "none";
             }
         }
 
         function verificaSobrenome() {
             if (document.getElementById("sobrenome").value == "") {
-                alert("Preencha o campo Sobrenome")
-                document.getElementById("sobrenome").focus();
+                document.getElementById("avisoSobrenome").style.display = "block";
+
+                //alert("Preencha o campo Sobrenome")
+                //document.getElementById("sobrenome").focus();
+            } else {
+                document.getElementById("avisoSobrenome").style.display = "none";
             }
 
         }
 
         function verificaCPF() {
             if (document.getElementById("cpf").value == "") {
-                alert("Preencha o campo CPF")
-                document.getElementById("cpf").focus();
+                document.getElementById("avisoCPF").style.display = "block";
+
+                //alert("Preencha o campo CPF")
+                //document.getElementById("cpf").focus();
+            } else {
+                document.getElementById("avisoCPF").style.display = "none";
             }
 
         }
 
         function verificaNasc() {
             if (document.getElementById("nasc").value == "") {
-                alert("Preencha o campo Data de Nascimento")
-                document.getElementById("nasc").focus();
+                document.getElementById("avisoNasc").style.display = "block";
+                //alert("Preencha o campo Data de Nascimento")
+                //document.getElementById("nasc").focus();
+            } else {
+                document.getElementById("avisoNasc").style.display = "none";
             }
 
         }
 
         function verificaSexo() {
-            alert("Selecione o Sexo")
-
+            if (document.getElementById("nasc").value == "") {
+                document.getElementById("avisoSexo").style.display = "block";
+            } else {
+                document.getElementById("avisoSexo").style.display = "none";
+            }
         }
 
         function isVazio() {
@@ -63,19 +81,26 @@
 
             <div class="text-center" style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around">
                 <div>
-                    <label for='nome' >Nome</label><br>
-                    <input type='text' name='nome' id='nome'>
+                    <label for='nome'>Nome</label><br>
+                    <input type='text' name='nome' id='nome' onfocusout="verificaNome()"><br>
+
+                    <div id="avisoNome" style="display:none"> 
+                    <label for='nome' style="color:red">Preencha o campo Nome</label>
+                    </div>
                 </div>
 
                 <div>
                     <label for='sobrenome'>Sobrenome</label><br>
-                    <input type='text' name='sobrenome' id='sobrenome'>
+                    <input type='text' name='sobrenome' id='sobrenome' onfocusout="verificaSobrenome()"><br>
+
+                    <div id="avisoSobrenome" style="display:none"> 
+                    <label for='sobrenome' style="color:red">Preencha o campo Sobrenome</label>
+                    </div>
                 </div>
             </div>
             <br><br>
 
                 <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around; padding: 0% 20% 0%;">
-
                     <div>
                         <input type="radio" id="Masculino" name="sexo" value="Masculino">
                         <label for="html">Masculino</label>
@@ -85,25 +110,34 @@
                         <label for="css">Feminino</label>
                     </div>
 
+                </div>
+                <br><br>
+
+                <div>
+                    <label for='cpf'>CPF</label><br>
+                    <input type='text' name='cpf' id='cpf' onfocusout="verificaCPF()"><br>
+
+                    <div id="avisoCPF" style="display:none"> 
+                    <label for='cpf' style="color:red">Preencha o campo CPF</label>
                     </div>
-                    <br><br>
 
-                    <div>
-                        <label for='cpf'>CPF</label><br>
-                        <input type='text' name='cpf' id='cpf'>
+                </div>
+                <br><br>
+
+                <div>
+                    <label for='nasc'>Data de Nascimento</label><br>
+                    <input type='text' name='nasc' id='nasc'onfocusout="verificaNasc()"><br>
+
+                    <div id="avisoNasc" style="display:none"> 
+                    <label for='nasc' style="color:red">Preencha o campo Nascimento</label>
                     </div>
-                    <br><br>
-
-                    <div>
-                        <label for='nasc'>Data de Nascimento</label><br>
-                        <input type='text' name='nasc' id='nasc'>
-                    </div>
-                    <br><br>
+                </div>
+                <br><br>
 
 
-                    <input type='submit' name='casastro' value='Validar'>
+                <input type='submit' name='casastro' value='Validar'>
 
-                    <input type='reset'>
+                <input type='reset'>
 
 
 </form>
