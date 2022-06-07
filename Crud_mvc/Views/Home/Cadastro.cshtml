@@ -3,59 +3,110 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script>
+        function verificaNome() {
+            if (document.getElementById("nome").value == "") {
+                alert("Preencha o campo Nome")
+                document.getElementById("nome").focus();
+
+            }
+        }
+
+        function verificaSobrenome() {
+            if (document.getElementById("sobrenome").value == "") {
+                alert("Preencha o campo Sobrenome")
+                document.getElementById("sobrenome").focus();
+            }
+
+        }
+
+        function verificaCPF() {
+            if (document.getElementById("cpf").value == "") {
+                alert("Preencha o campo CPF")
+                document.getElementById("cpf").focus();
+            }
+
+        }
+
+        function verificaNasc() {
+            if (document.getElementById("nasc").value == "") {
+                alert("Preencha o campo Data de Nascimento")
+                document.getElementById("nasc").focus();
+            }
+
+        }
+
+        function verificaSexo() {
+            alert("Selecione o Sexo")
+
+        }
+
+        function isVazio() {
+         
+
+
+        }
+
+        function alertVazio(){
+
+        }
+
+    </script>
+
 </head>
 <body>
     <div class="text-center">
         <h1 class="display-4">Cadastro</h1>
     </div>
     <div class="text-center">
-        <form action="Lista" method="post" name="cadastro">
+        <form action="Lista" method="post" name="cadastro" style="padding:10px 300px 10px;">
 
-            <div style="display:flex; flex-direction:row; flex-wrap:nowrap">
+            <div class="text-center" style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around">
                 <div>
-                    <label for='nome'>Nome</label><br>
-                    <input type='text' name='nome' id='nome'
+                    <label for='nome' >Nome</label><br>
+                    <input type='text' name='nome' id='nome'>
                 </div>
-                
 
                 <div>
-
                     <label for='sobrenome'>Sobrenome</label><br>
                     <input type='text' name='sobrenome' id='sobrenome'>
-
                 </div>
             </div>
             <br><br>
-            <div>
 
-                <label for='cpf'>CPF</label><br>
-                <input type='text' name='cpf' id='cpf'>
-                <br><br>
-            </div>
+                <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around; padding: 0% 20% 0%;">
 
-            <div>
+                    <div>
+                        <input type="radio" id="Masculino" name="sexo" value="Masculino">
+                        <label for="html">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Feminino" name="sexo" value="Feminino">
+                        <label for="css">Feminino</label>
+                    </div>
 
-                <label for='nasc'>Data de Nascimento</label><br>
-                <input type='text' name='nasc' id='nasc'>
-                <br><br>
-            </div>
+                    </div>
+                    <br><br>
 
-            <div>
+                    <div>
+                        <label for='cpf'>CPF</label><br>
+                        <input type='text' name='cpf' id='cpf'>
+                    </div>
+                    <br><br>
 
-                <label for="sexo">Sexo</label><br>
-                <input type="text" name="sexo" id="sexo">
-                <br><br>
-            </div>
-
-
-            <input type='submit' name='casastro' value='Cadastrar'>
-
-            <input type="button" name="busca" value="Buscar">
-
-            <input type='reset'>
+                    <div>
+                        <label for='nasc'>Data de Nascimento</label><br>
+                        <input type='text' name='nasc' id='nasc'>
+                    </div>
+                    <br><br>
 
 
-        </form>
+                    <input type='submit' name='casastro' value='Validar'>
+
+                    <input type='reset'>
+
+
+</form>
     </div>
 </body>
 </html>
