@@ -38,11 +38,75 @@ namespace Crud_mvc.Controllers
             return View();
         }
 
+        public bool contemLetras(string texto)
+        {
+            if (texto.Where(c => char.IsLetter(c)).Count() > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool contemNumeros(string texto)
+        {
+            if (texto.Where(c => char.IsNumber(c)).Count() > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public string verificaNome(string nome)
+        {
+            if (nome.Contains(" "))
+            {
+                return "Insira somente o primeiro nome, sem espaços";
+            }else if (contemNumeros(nome) == true)
+            {
+                return "Insira um nome válido, sem números";
+
+            }
+            else
+            {
+                return "válido";
+            }
+
+        }
+
+        public string verificaSobreome(string sobrenome)
+        {
+            if (contemNumeros(sobrenome) == true)
+            {
+                return "Insira um sobrenome válido, sem números";
+
+            }else{
+                return "válido";
+            }
+
+        }
+
+        public string verificaCPF(string cpf)
+        {
+            if (contemLetras(cpf) == true)            {
+                return "Insira um CPF válido, sem letras";
+
+            }
+            else
+            {
+                return "válido";
+            }
+
+        }
+
+        
+
 
 
         [HttpPost]
         public ActionResult Lista (string nome, string sobrenome, string cpf, string nasc, string sexo)
         {
+            ViewData["codNome"] = verificaNome(nome);
+            ViewData["CodSobrenome"] = verificaSobreome(sobrenome);
+            ViewData["CodCPF"] = verificaCPF(cpf);
+
             
             ViewData["nome"] = nome;
             ViewData["sobrenome"] = sobrenome;
@@ -50,8 +114,6 @@ namespace Crud_mvc.Controllers
             ViewData["nasc"] = nasc;
             ViewData["sexo"] = sexo;
 
-
-            //System.IO.File.WriteAllText("","");
 
             return View();
         }

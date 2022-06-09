@@ -4,38 +4,101 @@
 @{
     ViewBag.Title = "Lista";
 }
+<style>
+    .info {
+        color: white;
+        padding: 20px 0px 20px;
+    }
+    .check {
+        color: white;
+        padding: 20px 0px 20px;
+        width: 100%;
+    }
+</style>
+<h2 class="text-center" style="padding:20px 0px 30px;">Visualizar</h2>
 
-<h2>Visualizar</h2>
+<div style="display: flex; flex-direction: column;">
 
-<div>
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
+     background-color:dodgerblue; border-radius:50px; width:100%;">
 
-    <div>
-        <h3>Nome</h3>
-        <p>
-            @ViewData["nome"] @ViewData["sobrenome"]<br><br>
-        </p>
+        <div class="text-center info">
+            <h3>Nome</h3>
+            <p>
+                @ViewData["nome"] @ViewData["sobrenome"]
+            </p>
+        </div>
+
+        <div class="text-center info">
+            <h3>CPF</h3>
+            <p>
+                @ViewData["cpf"]
+            </p>
+        </div>
+        <div class="text-center info">
+            <h3>Data de Nascimento</h3>
+            <p>
+                @ViewData["nasc"]
+            </p>
+
+        </div>
+        <div class="text-center info">
+            <h3>Sexo</h3>
+            <p>
+                @ViewData["sexo"]
+            </p>
+        </div>
     </div>
 
-    <div>
-        <h3>CPF</h3>
-        <p>
-            @ViewData["cpf"]<br><br>
-        </p>
+    <div style="background-color:indianred; border-radius:50px; width:100%;">
+
+        <h2 class="text-center" style="color:darkred">Cadastro Inválido</h2>
+
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;">
+
+            <div class="text-center check ">
+                <div>
+                    Nome<br>
+                    @ViewData["codNome"]
+                </div>
+                <div>
+                    Sobrenome<br>
+                    @ViewData["codSobrenome"]
+                </div>
+            </div>
+
+            <div class="text-center check">
+                <p>CPF</p>
+                <p>
+                    @ViewData["codCPF"]
+                </p>
+            </div>
+            <div class="text-center check">
+                <p>Data de Nascimento</p>
+                <p>
+                    @ViewData["nasc"]
+                </p>
+
+            </div>
+            <div class="text-center check">
+                <p>Sexo</p>
+                <p>
+                    @ViewData["sexo"]
+                </p>
+            </div>
+
+
+
+        </div>
+        </divstyle=">
+
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
+     background-color:lightgreen; border-radius:50px; width:100%;">
+
+            <h2 style="color:green">Cadastro válido</h2>
+
+
+        </div>
+
+
     </div>
-    <div>
-
-
-        <h3>Data de Nascimento</h3>
-        <p>
-            @ViewData["nasc"]<br><br>
-        </p>
-
-    </div>
-    <div>
-
-        <h3>Sexo</h3>
-        <p>
-            @ViewData["sexo"]<br><br>
-        </p>
-    </div>
-</div>
