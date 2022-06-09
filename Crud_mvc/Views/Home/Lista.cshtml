@@ -4,11 +4,25 @@
 @{
     ViewBag.Title = "Lista";
 }
-<script>
-    if (@ViewData["codNome"] == ("válido")) {
+@if (ViewData["codNome"] ===)
+{
+    <script>
         document.getElementById('erroNome').style.display = "none";
-    }else {
+
+    </script>
+}
+else
+{
+    <script>
         document.getElementById('erroNome').style.display = "block";
+
+    </script>
+}
+<script>
+    if ('@ViewData["codNome"]' === ("válido")) {
+        
+    }else {
+        
     }
 
 </script>
@@ -18,6 +32,7 @@
         color: white;
         padding: 20px 0px 20px;
     }
+
     .check {
         color: white;
         padding: 20px 0px 20px;
@@ -99,15 +114,15 @@
 
 
         </div>
-        </div>
+    </div>
 
-        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
      background-color:lightgreen; border-radius:50px; width:100%;">
 
-            <h2 style="color:green">Cadastro válido</h2>
-
-
-        </div>
+        <h2 style="color:green">Cadastro válido</h2>
 
 
     </div>
+
+
+</div>
