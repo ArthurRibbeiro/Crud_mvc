@@ -4,6 +4,15 @@
 @{
     ViewBag.Title = "Lista";
 }
+<script>
+    if (@ViewData["codNome"] == ("válido")) {
+        document.getElementById('erroNome').style.display = "none";
+    }else {
+        document.getElementById('erroNome').style.display = "block";
+    }
+
+</script>
+
 <style>
     .info {
         color: white;
@@ -56,31 +65,31 @@
 
         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;">
 
-            <div class="text-center check ">
-                <div>
+            <div class="text-center check" style="display:none;">
+                <div id="erroNome">
                     Nome<br>
                     @ViewData["codNome"]
                 </div>
-                <div>
+                <div id="errosobrenome">
                     Sobrenome<br>
                     @ViewData["codSobrenome"]
                 </div>
             </div>
 
-            <div class="text-center check">
+            <div class="text-center check" id="erroCPF">
                 <p>CPF</p>
                 <p>
                     @ViewData["codCPF"]
                 </p>
             </div>
-            <div class="text-center check">
+            <div class="text-center check" id="erroNasc">
                 <p>Data de Nascimento</p>
                 <p>
                     @ViewData["nasc"]
                 </p>
 
             </div>
-            <div class="text-center check">
+            <div class="text-center check" id="erroSexo">
                 <p>Sexo</p>
                 <p>
                     @ViewData["sexo"]
@@ -90,7 +99,7 @@
 
 
         </div>
-        </divstyle=">
+        </div>
 
         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
      background-color:lightgreen; border-radius:50px; width:100%;">
