@@ -4,7 +4,7 @@
 @{
     ViewBag.Title = "Lista";
 }
-@if (ViewData["codNome"] ===)
+@if (@ViewData["codNome"].Equals("válido"))
 {
     <script>
         document.getElementById('erroNome').style.display = "none";
@@ -80,7 +80,7 @@ else
 
         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;">
 
-            <div class="text-center check" style="display:none;">
+            <div class="text-center check">
                 <div id="erroNome">
                     Nome<br>
                     @ViewData["codNome"]

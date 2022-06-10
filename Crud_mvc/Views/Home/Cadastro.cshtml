@@ -11,6 +11,10 @@
 
     <script>
 
+
+
+
+
         function validar() {
             if ((document.getElementById("nome").value == "") ||(document.getElementById("sobrenome").value == "") ||(document.getElementById("cpf").value == "")||(document.getElementById("nasc").value == "") ||(!((document.getElementById("masculino").checked) || (document.getElementById("feminino").checked)))) {
                 alert('preencha todos os campos');
@@ -148,7 +152,8 @@
 
                 <div>
                     <label for='nasc'>Data de Nascimento</label><br>
-                    <input type='date' name='nasc' id='nasc'onfocusout="verificaNasc()"><br>
+                    <input type='date' name='nasc' id='nasc'onfocusout="verificaNasc()"
+                             min="2022-06-03" max="2022-06-05" placeholder="dd-mm-yyyy"><br>
 
                     <div id="avisoNasc" style="display:none"> 
                     <label for='nasc' style="color:red">Preencha o campo Nascimento</label>
@@ -164,5 +169,26 @@
 
 </form>
     </div>
+
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        var past = (yyyy - 100) + '-' + mm + '-' + dd;
+        alert(past);
+        document.getElementById("nasc").setAttribute("max", today);
+        document.getElementById("nasc").setAttribute("min", past);
+    </script>
 </body>
 </html>

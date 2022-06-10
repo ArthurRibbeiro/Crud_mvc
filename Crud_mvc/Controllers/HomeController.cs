@@ -96,7 +96,13 @@ namespace Crud_mvc.Controllers
 
         }
 
-        
+        public string corrigeNasc(string nasc)
+        {
+            return nasc.Split('-')[2] + '-' + nasc.Split('-')[1] + '-' + nasc.Split('-')[0];
+
+        }
+
+
 
 
 
@@ -111,7 +117,7 @@ namespace Crud_mvc.Controllers
             ViewData["nome"] = nome;
             ViewData["sobrenome"] = sobrenome;
             ViewData["cpf"] = cpf;
-            ViewData["nasc"] = nasc;
+            ViewData["nasc"] = corrigeNasc(nasc);
             ViewData["sexo"] = sexo;
 
 
