@@ -27,8 +27,9 @@ else
     }
 
     .check {
-        color: white;
-        padding: 20px 0px 20px;
+        color: darkred;
+        padding: 10px 0px 10px;
+        font-weight:500;
         width: 100%;
     }
 </style>
@@ -39,7 +40,7 @@ else
     <h2 class="text-center">@ViewData["nome"] @ViewData["sobrenome"]</h2>
 
     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
-     background-color:dodgerblue; border-radius:50px; width:100%;">
+     background-color:dodgerblue; border-radius:50px; width:100%; padding:10px 0px 10px;">
 
 
 
@@ -80,11 +81,11 @@ else
     </div>
     <br>
 
-    <div class="text-center" style="background-color:indianred; border-radius:50px; width:100%;">
+    <div class="text-center check" style=" background-color: indianred; border-radius: 50px; width: 100%; padding: 20px 0px 30px;">
 
         <h2 class="text-center" style="color:darkred">Cadastro Inválido</h2>
 
-        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;">
+        <div style=" font-family: Verdana; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; ">
 
             
             <div class="text-center check" id="erroNome">
@@ -119,7 +120,10 @@ else
 
         </div>
 
-        <input class="text-center btn" type="button" value="Novo Cadastro">
+        <p>Corrija os erros e tente novamente</p>
+
+        <input   class="text-center btn btn-danger" type="button" value="Novo Cadastro" onclick="location.href='@Url.Action("Cadastro", "Home")'" >
+       
     </div>
 
     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;
@@ -134,11 +138,22 @@ else
 </div>
 
 <script>
-
-    if ('@ViewData["codNome"]' == ("Válido")) {
-        alert('aaaaaa')
-        //document.getElementById('erroNome').style.display = "none";
+    window.onload = function checar() {
+    string codNome = @ViewData["codNome"];
+    string codSobrenome = @ViewData["codSobrenome"];
+    string codCPF = @ViewData["codCPF"];
+    string codNasc = @ViewData["codNasc"];
+        alert('aaaaaa');
     }
-   
+    //if (codNome.Equals("Válido")) {
+        
+    //}
+
+
+    //if ())  {
+        
+        //document.getElementById('erroNome').style.display = "none";
+    //}
+    
 
 </script>
