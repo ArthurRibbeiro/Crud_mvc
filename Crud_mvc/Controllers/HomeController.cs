@@ -33,10 +33,6 @@ namespace Crud_mvc.Controllers
             return View();
         }
 
-        public IActionResult Consulta()
-        {
-            return View();
-        }
 
         public bool contemLetras(string texto)
         {
