@@ -118,7 +118,11 @@ namespace Crud_mvc.Controllers
             }else if (data.Year == ano && data.Month == mes && data.Day < dia)
             {
                 valido = false;
+            }else if (ano < (data.Year - 130))
+            {
+                valido = false;
             }
+
 
             if (valido)
             {
