@@ -67,7 +67,6 @@ D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.TagHelpers.input.cache
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.TagHelpers.output.cache
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Crud_mvc.RazorCoreGenerate.cache
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Cadastro.cshtml.g.cs
-D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Consulta.cshtml.g.cs
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Lista.cshtml.g.cs
 D:\Proj\temp1\Crud_mvc\Crud_mvc\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
