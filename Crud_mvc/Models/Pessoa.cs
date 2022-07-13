@@ -7,14 +7,28 @@ namespace Crud_mvc.Models
 {
     public class Pessoa
     {
-        public string nome;
-        public string sobrenome;
-        public string cpf;
-        public string nasc;
-        public int idade;
+        private string nome;
+        private string sobrenome;
+        private string cpf;
+        private string nasc;
+        private int idade;
+        private string sexo;
+
+        private string valNome;
+        private string valSobrenome;
+        private string valCPF;
+        private string valNasc;
+
+
+
+
+
+
 
         public Pessoa(string nome, string sobrenome, string cpf, string nasc, string idade)
         {
+            nasc = corrigeNasc(nasc);
+
             setNome(nome);
             setSobrenome(sobrenome);
             setCPF(cpf);
@@ -30,7 +44,7 @@ namespace Crud_mvc.Models
 
         public void setNome(string nome)
         {
-            verificaNome(nome);
+            valNome = verificaNome(nome);
             this.nome = nome;
 
         }
@@ -42,7 +56,7 @@ namespace Crud_mvc.Models
 
         public void setSobrenome(string sobrenome)
         {
-            verificaSobreome(sobrenome);
+            valSobrenome = verificaSobreome(sobrenome);
             this.sobrenome = sobrenome;
 
         }
@@ -54,7 +68,7 @@ namespace Crud_mvc.Models
 
         public void setCPF(string cpf)
         {
-            verificaCPF(cpf);
+            valCPF = verificaCPF(cpf);
             this.cpf = cpf;
 
         }
@@ -66,7 +80,7 @@ namespace Crud_mvc.Models
 
         public void setNasc(string nasc)
         {
-            verificaNasc(nasc);
+            valNasc = verificaNasc(nasc);
             this.nasc= nasc;
 
         }
@@ -80,6 +94,37 @@ namespace Crud_mvc.Models
         {
             this.idade = idade;
 
+        }
+
+        public string getSexo()
+        {
+            return this.sexo;
+        }
+
+        public void setSexo(string sexo)
+        {
+            this.sexo = sexo;
+
+        }
+
+        public string getValNome()
+        {
+            return this.valNome;
+        }
+
+        public string getValSobrenome()
+        {
+            return this.valSobrenome;
+        }
+
+        public string getValCPF()
+        {
+            return this.valCPF;
+        }
+
+        public string getValNasc()
+        {
+            return this.valNasc;
         }
 
         public bool contemLetras(string texto)

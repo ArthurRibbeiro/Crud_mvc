@@ -158,22 +158,23 @@ namespace Crud_mvc.Controllers
         [HttpPost]
         public ActionResult Lista (string nome, string sobrenome, string cpf, string nasc, string sexo)
         {
-            nasc = corrigeNasc(nasc);
+            var pessoa = new Pessoa(nome, sobrenome, cpf, nasc, sexo);
 
-            int idade = calcIdade(nasc);
-            ViewData["codNome"] = verificaNome(nome);
-            ViewData["codSobrenome"] = verificaSobreome(sobrenome);
-            ViewData["codCPF"] = verificaCPF(cpf);
-            ViewData["codNasc"] = verificaNasc(nasc);
+           
+
+            ViewData["codNome"] = pessoa.getValNome();
+            ViewData["codSobrenome"] = pessoa.getValSobrenome();
+            ViewData["codCPF"] = pessoa.getValCPF();
+            ViewData["codNasc"] = pessoa.getValNasc();
 
 
 
-            ViewData["nome"] = nome;
-            ViewData["sobrenome"] = sobrenome;
-            ViewData["cpf"] = cpf;
-            ViewData["nasc"] = nasc;
-            ViewData["idade"] = idade;
-            ViewData["sexo"] = sexo;
+            ViewData["nome"] = pessoa.getNome();
+            ViewData["sobrenome"] = pessoa.getSobrenome();
+            ViewData["cpf"] = pessoa.getCPF();
+            ViewData["nasc"] = pessoa.getNasc();
+            ViewData["idade"] = pessoa.getIdade();
+            ViewData["sexo"] = pessoa.getSexo();
 
 
             return View();
