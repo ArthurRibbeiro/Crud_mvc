@@ -8,23 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\artri\\.nuget\\packages\\": {},
-    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\artrib\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proj\\temp1\\Crud_mvc\\Crud_mvc\\Crud_mvc.csproj",
+      "projectUniqueName": "C:\\proj\\temp1\\Crud_mvc\\Crud_mvc\\Crud_mvc.csproj",
       "projectName": "Crud_mvc",
-      "projectPath": "D:\\Proj\\temp1\\Crud_mvc\\Crud_mvc\\Crud_mvc.csproj",
-      "packagesPath": "C:\\Users\\artri\\.nuget\\packages\\",
-      "outputPath": "D:\\Proj\\temp1\\Crud_mvc\\Crud_mvc\\obj\\",
+      "projectPath": "C:\\proj\\temp1\\Crud_mvc\\Crud_mvc\\Crud_mvc.csproj",
+      "packagesPath": "C:\\Users\\artrib\\.nuget\\packages\\",
+      "outputPath": "C:\\proj\\temp1\\Crud_mvc\\Crud_mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\artri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\artrib\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
